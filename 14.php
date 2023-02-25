@@ -1,5 +1,5 @@
 <?php
-
+//Работа с %
 $a=10;
 $b=3;
 if ($a%$b == 0){
@@ -7,7 +7,7 @@ if ($a%$b == 0){
 }else{
   echo "Делится с остатком ", $a%$b;
 }
-
+//Работа со степенью и корнем
 $st = pow(2,10);
 echo "\n", $st;
 $st = sqrt(245);
@@ -20,7 +20,7 @@ foreach ($array as $value) {
 }
 echo "\n", sqrt ($res), "\n";
 
-
+//Работа с функциями округления
 echo "\n", round (sqrt(379),);
 echo "\n", round (sqrt(379), 1);
 echo "\n", round (sqrt(379),2), "\n";
@@ -34,11 +34,11 @@ $mas = array(
   foreach ($mas as $value) {
     echo "\n", $value, " " ;
 }
-
+//Работа с min и max
 $arr = array(4, -2, 5, 19, -130, 0, 10);
 echo "\n", min($arr), " ", max($arr);
 
-
+//Работа с рандомом
 echo "\n";
 echo "\n", rand(1, 100);
 $mm = array();
@@ -50,7 +50,65 @@ while ($r < 11){
 }
 echo "\n";
   foreach ($mm as $value) {
-    echo "\n", $value, " " ;
+    echo  $value, " " ;
 }
+
+//Работа с модулем
+$a = rand(1,100);
+$b = rand(1,100);
+echo "\n", "\n", abs($a-$b);
+echo "\n";
+
+
+$ms =array(
+  1 => 1, 
+  2 =>2, 
+  3=>-1, 
+  4=>-2, 
+  5=>3, 
+  6=>-3);
+$r = 1;
+while ($r <= 6){
+  $ms[$r] = abs($ms[$r]);
+  $r +=1;
+}
+echo "\n";
+  foreach ($ms as $value) {
+    echo  $value, " " ;
+}
+
+//Общее
+echo "\n";
+$a = rand(1, 200);
+$r = 2;
+$qq = array( 1=>1);
+while ($r <=$a){
+  if ($a%$r == 0){
+    $qq[] = $r;
+  }
+  $r +=1;
+}
+
+echo "\n" , $a;
+echo "\n";
+  foreach ($qq as $value) {
+    echo  $value, " " ;
+}
+
+
+
+echo "\n";
+$rt = array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+$rt = array_values($rt);
+$r =0;
+$a =0;
+  foreach ($rt as $value) {
+    if ($a <=10){
+      $a += $value;
+      $r +=1;
+    }
+}
+echo "\n" , $r;
+
 
 ?>
